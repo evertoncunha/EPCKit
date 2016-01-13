@@ -1,0 +1,6 @@
+framework module EPCKit {
+  umbrella header "EPCKit.h"
+
+  export *
+  module * { export * }
+}
