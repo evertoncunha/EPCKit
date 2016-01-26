@@ -20,13 +20,11 @@
 
 @end
 
-@interface EPCFilterController : NSObject {
-	
-	IBOutletCollection(UISearchBar) NSArray
-	*_searchBars;
-}
+@interface EPCFilterController : NSObject
 
 @property (nonatomic, weak) IBOutlet id<EPCFilterControllerDelegate> delegate;
+
+@property (nonatomic, weak) IBOutletCollection(UISearchBar) NSArray *searchBars;
 
 @property (nonatomic) IBOutletCollection(UIButton) NSArray *filterButtons;
 
@@ -35,6 +33,8 @@
 - (void)clearFilters;
 
 - (NSArray*)filteredDataFromData:(NSArray*)data;
+
+- (NSPredicate*)predicateForActiveFiltersExcept:(EPCFilterButton*)exception;
 
 - (void)selectIndex:(NSInteger)index forButton:(UIButton*)button;
 
@@ -48,7 +48,11 @@
 
 @property (nonatomic) UIFont *fontForPopOverHeader;
 
-@property (nonatomic) UIColor *colorForHeaderBackground;
+@property (nonatomic) UIColor *colorForPopOverHeaderBackground;
+
+@property (nonatomic) UIColor *colorForPopOverHeaderText;
+
+@property (nonnull) NSString *textDoNotFilter;
 
 @end
 
