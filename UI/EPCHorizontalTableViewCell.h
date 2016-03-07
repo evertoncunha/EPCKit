@@ -1,1 +1,0 @@
-#import <EPCKit/EPCHorizontalTableViewCell.h>

@@ -1,1 +1,0 @@
-#import <EPCKit/EPCGalleryDelegate.h>
