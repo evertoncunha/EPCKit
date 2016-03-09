@@ -212,3 +212,29 @@ extension UIResponder {
 		}
 	}
 }
+
+// MARK: UIApplication
+
+extension UIApplication {
+	
+	static var applicationDocumentsDirectory: NSURL {
+		get {
+			return EPCKit.sharedInstance.applicationDocumentsDirectory
+		}
+	}
+}
+
+// MARK: EPCKit Aux
+
+class EPCKit: NSObject {
+	
+	static let sharedInstance = EPCKit()
+	
+	override private init() {}
+	
+	lazy var applicationDocumentsDirectory: NSURL = {
+		let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+		return urls[urls.count-1]
+	}()
+	
+}
