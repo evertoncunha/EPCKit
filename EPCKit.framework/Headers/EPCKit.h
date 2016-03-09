@@ -43,3 +43,4 @@ FOUNDATION_EXPORT const unsigned char EPCKitVersionString[];
 #import <EPCKit/EPCRadioControl.h>
 #import <EPCKit/EPCStrechableUITextField.h>
 #import <EPCKit/EPCVersionChecker.h>
+#import <EPCKit/EPCTextFieldPopOver.h>
