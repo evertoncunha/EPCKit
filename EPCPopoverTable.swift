@@ -58,9 +58,6 @@ public class EPCPopoverTable: EPCPopover {
         get {
             return tableViewController
         }
-        set (v) {
-            
-        }
     }
 	
     // MARK: -

@@ -17,7 +17,7 @@ public class EPCPopover: NSObject {
     
     // MARK: Public
     
-    public var viewController = UIViewController()
+    public private(set) var viewController = UIViewController()
     
     public var didDismissBlock: (() -> Void)?
     
